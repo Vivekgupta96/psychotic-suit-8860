@@ -11,14 +11,14 @@ public class Student implements Serializable {
 	private String phoneNo;
 	private String gender;
 	private String dob;
-	private int cid;
+	private String coursename;
 	
 	public Student() {
 		super();
 	}
 
 	public Student(String name, String password, String address, String email, String phoneNo, String gender,
-			String dob, int cid) {
+			String dob, String coursename) {
 		super();
 		this.name = name;
 		this.password = password;
@@ -27,7 +27,7 @@ public class Student implements Serializable {
 		this.phoneNo = phoneNo;
 		this.gender = gender;
 		this.dob = dob;
-		this.cid = cid;
+		this.coursename = coursename;
 	}
 
 	public String getName() {
@@ -86,19 +86,22 @@ public class Student implements Serializable {
 		this.dob = dob;
 	}
 
-	public int getCid() {
-		return cid;
+	public String getCoursename() {
+		return coursename;
 	}
 
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
 	}
 
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", password=" + password + ", address=" + address + ", email=" + email
-				+ ", phoneNo=" + phoneNo + ", gender=" + gender + ", dob=" + dob + ", cid=" + cid + "]";
+				+ ", phoneNo=" + phoneNo + ", gender=" + gender + ", dob=" + dob + ", coursename=" + coursename + "]";
 	}
+
+	
+
 	
 	
 }

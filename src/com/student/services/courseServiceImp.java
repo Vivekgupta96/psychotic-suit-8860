@@ -28,8 +28,19 @@ public class courseServiceImp implements courseService {
 	}
 
 	@Override
-	public void deleteCourse(int id, Map<Integer, Course> crs) {
-		// TODO Auto-generated method stub
+	public void deleteCourse(int cid, Map<Integer, Course> crs) throws CourseException {
+		if (crs != null && crs.size() > 0) {
+			if (crs.containsKey(cid)) {
+				crs.remove(cid);
+				System.out.println("course deleted succesfully");
+				return ;
+			} else {
+				throw new CourseException("course not found");
+			}
+
+		} else {
+			throw new CourseException("course not found");
+		}
 
 	}
 

@@ -11,7 +11,7 @@ public interface courseService {
 	
 	public void viewAllCourse(Map<Integer, Course> crs) throws CourseException ;
 
-	public void deleteCourse(int id, Map<Integer, Course> crs) ;
+	public void deleteCourse(int id, Map<Integer, Course> crs) throws CourseException ;
 
 	public String updateCourse(int id, Course addcrs, Map<Integer, Course> crs) throws CourseException;
 
