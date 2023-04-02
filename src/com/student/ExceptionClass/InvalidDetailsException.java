@@ -6,7 +6,4 @@ public class InvalidDetailsException extends Exception {
 		super(message);
 		
 	}
-	
-	
-
 }

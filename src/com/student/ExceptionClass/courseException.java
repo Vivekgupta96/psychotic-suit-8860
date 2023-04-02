@@ -1,12 +1,12 @@
 package com.student.ExceptionClass;
 
-public class courseException {
+public class CourseException extends Exception {
 
-
-	public  courseException (String msg) {
-		
-		super();
+	public CourseException(String msg) {
+		// TODO Auto-generated constructor stub
+		super(msg);
 	}
+
 	
-	
+
 }

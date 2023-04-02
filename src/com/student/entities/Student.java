@@ -1,25 +1,32 @@
 package com.student.entities;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
 	
 	private String name;
 	private String password;
 	private String address;
 	private String email;
+	private String phoneNo;
 	private String gender;
+	private String dob;
 	private int cid;
 	
 	public Student() {
-		
+		super();
 	}
 
-	public Student(String name, String password, String address, String email, String gender, int cid) {
+	public Student(String name, String password, String address, String email, String phoneNo, String gender,
+			String dob, int cid) {
 		super();
 		this.name = name;
 		this.password = password;
 		this.address = address;
 		this.email = email;
+		this.phoneNo = phoneNo;
 		this.gender = gender;
+		this.dob = dob;
 		this.cid = cid;
 	}
 
@@ -55,12 +62,28 @@ public class Student {
 		this.email = email;
 	}
 
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+
 	public String getGender() {
 		return gender;
 	}
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
 	}
 
 	public int getCid() {
@@ -74,9 +97,8 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", password=" + password + ", address=" + address + ", email=" + email
-				+ ", gender=" + gender + ", cid=" + cid + "]";
+				+ ", phoneNo=" + phoneNo + ", gender=" + gender + ", dob=" + dob + ", cid=" + cid + "]";
 	}
-
 	
-
+	
 }
